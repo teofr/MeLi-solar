@@ -3,3 +3,7 @@ stats:
 
 tests:
 	python3 tests.py
+
+local:
+	python3 main.py
+	
