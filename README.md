@@ -3,8 +3,8 @@ Desafio MeLi
 
 ## Cosas que asumo
 
- * Cada dia dura lo mismo en cada planeta
- * No hay años bisiestos, cada año tiene 365 dias
+ * Cada dia dura lo mismo en cada planeta, ya que lo medimos desde la tierra.
+ * No hay años bisiestos, cada año tiene 365 dias, ya que nos importa las mediciones desde la tierra
  * Si los planetas forman un triangulo y el sol se encuentra en una arista, considero que el sol se encuentra adentro
  * Hay otro tipo de clima, "desconocido", que se da cuando los planetas forman un triangulo que no incluye al sol adentro
  * Solo me interesa saber la predicción del clima cuando comienza un nuevo dia, es decir, no me interesa saber la posición de los planetas al mediodia.
