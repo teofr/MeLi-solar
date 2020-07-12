@@ -1,6 +1,8 @@
 # MeLi-solar
 Desafio MeLi
 
+La API se puede acceder desde https://meli-solar.rj.r.appspot.com/clima?dia=567
+
 ## Como correr
 
 Requisitos:
@@ -10,6 +12,10 @@ Requisitos:
 `make stats` retorna las estadisticas para los proximos 10 años
 `make tests` ejectura los unit tests
 
+## Como hacer el deploy local
+
+ * `pip3 install -r requirements.txt`
+ * `make local`
 
 ## Cosas que asumo
 
@@ -39,3 +45,7 @@ Además, se les agrega a los planetas la posibilidad de hacer calculos entre ell
  * `includeOrigin()` chequea si el triangulo formado por los planetas incluye al origen. Esto se podria chequear usando trigonometria, pero utilizamos la información extra de que son planetas orbitando alrededor de un sol para no precisar operaciones entre flotantes.
 
 Para calcular el clima en un dia dado hace falta poder saber si los planetas están alineado y, si no lo estan, calcular el perimetro del triangulo formado y si el sol se encuentra contenido. Notar que los planetas nos ofrecen todas estas operaciones.
+
+## REST API
+
+El resultado esta hosteado en APPEngine. No se hizo un modelo de datos por falta de tiempo, pero si un servicio que calcula el resultado cada vez que se le pide.
