@@ -1,6 +1,16 @@
 # MeLi-solar
 Desafio MeLi
 
+## Como correr
+
+Requisitos:
+ * python3
+ * make
+
+`make stats` retorna las estadisticas para los proximos 10 años
+`make tests` ejectura los unit tests
+
+
 ## Cosas que asumo
 
  * Cada dia dura lo mismo en cada planeta, ya que lo medimos desde la tierra.
