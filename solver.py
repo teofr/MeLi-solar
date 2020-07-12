@@ -5,7 +5,9 @@ from src.auxmath import feq
 def calculate(years = 10):
     # Calculate the number of weather predictions for the given years
 
-    # TODO: check years validity
+    if years < 0:
+        raise Exception('Cannot predict weather for the past')
+    
     s = SolarSystem()
 
     ws = {"Lluvia" : 0,

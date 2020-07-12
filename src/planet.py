@@ -6,13 +6,15 @@ class Planet:
     # static methods meant to be used with Planets only
 
     def __init__(self, dist, mov):
-        self.dist = int(dist)
+        self.dist = dist
         self.mov = int(mov)
         self.angle = 0
     
     def advance(self, days = 1):
         # Since the problem only deals with integers, we stay within integers
-        # TODO: check days validity
+        if days < 0:
+            raise Exception('Cannot advance planets to the past')
+        
         self.angle += self.mov*int(days)
         self.angle %= 360
     
