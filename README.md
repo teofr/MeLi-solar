@@ -40,9 +40,11 @@ Luego, caracterizamos al sistema solar como un conjunto de 3 planetas (Vulcanos,
  * calcular el clima actual.
 
 Además, se les agrega a los planetas la posibilidad de hacer calculos entre ellos:
- * `collinear()` permite calcular si tres planetas son colineares, se fija si forman un triangulo degenerado
- * `collinearWithOrigin()` verifica si tres planetas son colineares con el origen. Notar que se podría lograr algo parecido usando `collinear()`, pero esta operación es más segura, ya que no precisa hacer comparaciones entre floats
- * `includeOrigin()` chequea si el triangulo formado por los planetas incluye al origen. Esto se podria chequear usando trigonometria, pero utilizamos la información extra de que son planetas orbitando alrededor de un sol para no precisar operaciones entre flotantes.
+ * `collinear()` permite calcular si tres planetas son colineales, se fija si forman un triangulo degenerado.
+
+Por otro lado, el sistema solar tiene métodos para observar como interactúan los planetas con el sol:
+ * `collinearWithSun()` verifica si tres planetas son colineales con el sol. Notar que se podría lograr algo parecido usando `Planet.collinear()`, pero esta operación es más segura, ya que no precisa hacer comparaciones entre floats, y más rápida, ya que utiliza menos operaciones menos costosas.
+ * `includeSun()` chequea si el triangulo formado por los planetas incluye al sol. Esto se podria chequear usando trigonometria, pero utilizamos la información extra de que son planetas orbitando cirularmente alrededor de un sol para no precisar operaciones entre flotantes.
 
 Para calcular el clima en un dia dado hace falta poder saber si los planetas están alineado y, si no lo estan, calcular el perimetro del triangulo formado y si el sol se encuentra contenido. Notar que los planetas nos ofrecen todas estas operaciones.
 
