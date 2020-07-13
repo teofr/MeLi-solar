@@ -49,3 +49,7 @@ Para calcular el clima en un dia dado hace falta poder saber si los planetas est
 ## REST API
 
 El resultado esta hosteado en APPEngine. No se hizo un modelo de datos por falta de tiempo, pero si un servicio que calcula el resultado cada vez que se le pide.
+
+Se utilizo Flask como framework para el backend por ser simple de usar, y suficiente para este ejercicio.
+
+La API solo responde al request `clima` con un argumento `dia` que debe ser entero y cumplir 0 <= `dia` <= 3650.

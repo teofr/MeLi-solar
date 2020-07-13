@@ -4,10 +4,18 @@ from src.solarSystem import SolarSystem
 
 app = Flask(__name__)
 
+BAD_REQUEST = 400
 
 @app.route('/clima')
 def weather():
-    day = int(request.args.get('dia'))
+    day = request.args.get('dia')
+    if day is None:
+        return 'Argument dia is mandatory', BAD_REQUEST    
+    
+    try:
+        day = int(day)
+    except:
+        return 'Argument dia should be an integer', BAD_REQUEST
 
     maxYears = 10
     daysPerYears = 365
@@ -16,7 +24,7 @@ def weather():
         return 'Wrong request. dia ({}) must be at least 0 and at most {}'.format(
             day,
             maxYears * daysPerYears
-        )
+        ), BAD_REQUEST
 
     s = SolarSystem()
     s.advance(day)
